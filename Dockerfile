@@ -29,6 +29,17 @@ RUN mkdir -p /etc/nginx/sites-enabled/
 COPY DripMart/nginx/sites-available/dripmart.org.conf /etc/nginx/sites-available/dripmart.org.conf
 RUN ln -s /etc/nginx/sites-available/dripmart.org.conf /etc/nginx/sites-enabled/
 
+## VidStreamerz Setup
+# Copy the website content to the Nginx document root
+RUN mkdir -p /usr/share/nginx/vidstreamerz
+COPY VidStreamerz/src /usr/share/nginx/vidstreamerz
+
+# Copy a custom Nginx configuration
+RUN mkdir -p /etc/nginx/sites-available/
+RUN mkdir -p /etc/nginx/sites-enabled/
+COPY VidStreamerz/nginx/sites-available/vidstreamerz.com.conf /etc/nginx/sites-available/vidstreamerz.com.conf
+RUN ln -s /etc/nginx/sites-available/vidstreamerz.com.conf /etc/nginx/sites-enabled/
+
 # Expose port 80 to the outside world
 EXPOSE 80
 
