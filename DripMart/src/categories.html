@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop by Categories - DripMart</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/messages.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="DripMart Logo">
+                    DripMart
+                </a>
+                <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="categories.html" class="nav-link active">Categories</a></li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link cart-icon">
+                            Cart
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <h1 class="mb-4 text-center">Shop by Categories</h1>
+        <p class="text-center mb-5">Explore our wide range of product categories designed to match your lifestyle.</p>
+        
+        <div class="row categories-grid">
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="products.html?category=electronics" class="category-card">
+                    <div class="category-image">
+                        <img src="images/products/headphones.jpg" alt="Electronics">
+                        <div class="category-overlay">
+                            <span class="btn btn-light">Shop Now</span>
+                        </div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Electronics</h3>
+                        <p>Headphones, speakers, and more</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="products.html?category=fashion" class="category-card">
+                    <div class="category-image">
+                        <img src="images/products/tshirt.jpg" alt="Fashion">
+                        <div class="category-overlay">
+                            <span class="btn btn-light">Shop Now</span>
+                        </div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Fashion</h3>
+                        <p>T-shirts, jeans, and accessories</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="products.html?category=footwear" class="category-card">
+                    <div class="category-image">
+                        <img src="images/products/sneakers.jpg" alt="Footwear">
+                        <div class="category-overlay">
+                            <span class="btn btn-light">Shop Now</span>
+                        </div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Footwear</h3>
+                        <p>Sneakers, boots, and shoes</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="products.html?category=accessories" class="category-card">
+                    <div class="category-image">
+                        <img src="images/products/watch.jpg" alt="Accessories">
+                        <div class="category-overlay">
+                            <span class="btn btn-light">Shop Now</span>
+                        </div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Accessories</h3>
+                        <p>Watches, jewelry, and more</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="products.html?category=bags" class="category-card">
+                    <div class="category-image">
+                        <img src="images/products/backpack.jpg" alt="Bags">
+                        <div class="category-overlay">
+                            <span class="btn btn-light">Shop Now</span>
+                        </div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Bags</h3>
+                        <p>Backpacks, handbags, and wallets</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="products.html?category=eyewear" class="category-card">
+                    <div class="category-image">
+                        <img src="images/products/sunglasses.jpg" alt="Eyewear">
+                        <div class="category-overlay">
+                            <span class="btn btn-light">Shop Now</span>
+                        </div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Eyewear</h3>
+                        <p>Sunglasses and eyeglasses</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="banner-section mt-5">
+            <div class="banner">
+                <div class="banner-content">
+                    <h2>New Season Arrivals</h2>
+                    <p>Check out all the new trends and styles for the season</p>
+                    <a href="products.html?new=true" class="btn btn-primary">Shop New Arrivals</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">DripMart</h4>
+                    <p>Your one-stop shop for stylish essentials. We bring you the best in fashion, tech, and lifestyle products.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>123 Shopping Street, Fashion Ave</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Email: hello@dripmart.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DripMart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DripMart - Stylish Shopping Experience</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/messages.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="DripMart Logo">
+                    DripMart
+                </a>
+                <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link cart-icon">
+                            Cart
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Style Meets Comfort</h1>
+            <p class="hero-text">Discover the latest trends in fashion, tech, and lifestyle essentials</p>
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="categories py-5">
+            <h2 class="text-center mb-4">Shop by Category</h2>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <a href="products.html?category=fashion" class="category-card">
+                        <img src="images/products/tshirt.jpg" alt="Fashion" class="category-img">
+                        <div class="category-overlay">
+                            <h3 class="category-name">Fashion</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-md-4">
+                    <a href="products.html?category=tech" class="category-card">
+                        <img src="images/products/headphones.jpg" alt="Tech" class="category-img">
+                        <div class="category-overlay">
+                            <h3 class="category-name">Tech</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-md-4">
+                    <a href="products.html?category=accessories" class="category-card">
+                        <img src="images/products/watch.jpg" alt="Accessories" class="category-img">
+                        <div class="category-overlay">
+                            <h3 class="category-name">Accessories</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured py-5">
+            <h2 class="text-center mb-4">Featured Products</h2>
+            <div class="products-grid">
+                <div class="card product-card">
+                    <div class="sale-badge">Sale</div>
+                    <img src="images/products/headphones.jpg" alt="Premium Headphones" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title product-title">Premium Headphones</h3>
+                        <div class="product-rating">★★★★★</div>
+                        <p class="card-text">Experience crystal clear sound with our premium wireless headphones.</p>
+                        <div class="product-price" data-price="79.99"><span class="original-price">$99.99</span>$79.99</div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="product-detail.html?id=1" class="btn btn-outline">View Details</a>
+                        <a href="#" class="btn btn-primary add-to-cart-btn" data-id="1">Add to Cart</a>
+                    </div>
+                </div>
+                
+                <div class="card product-card">
+                    <img src="images/products/tshirt.jpg" alt="Classic T-Shirt" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title product-title">Classic T-Shirt</h3>
+                        <div class="product-rating">★★★★☆</div>
+                        <p class="card-text">Ultra-soft cotton t-shirt for everyday comfort.</p>
+                        <div class="product-price" data-price="24.99">$24.99</div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="product-detail.html?id=2" class="btn btn-outline">View Details</a>
+                        <a href="#" class="btn btn-primary add-to-cart-btn" data-id="2">Add to Cart</a>
+                    </div>
+                </div>
+                
+                <div class="card product-card">
+                    <img src="images/products/sneakers.jpg" alt="Urban Sneakers" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title product-title">Urban Sneakers</h3>
+                        <div class="product-rating">★★★★★</div>
+                        <p class="card-text">Stylish and comfortable sneakers for the urban lifestyle.</p>
+                        <div class="product-price" data-price="89.99">$89.99</div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="product-detail.html?id=3" class="btn btn-outline">View Details</a>
+                        <a href="#" class="btn btn-primary add-to-cart-btn" data-id="3">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="products.html" class="btn btn-outline">View All Products</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">DripMart</h4>
+                    <p>Your one-stop shop for stylish essentials. We bring you the best in fashion, tech, and lifestyle products.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>123 Shopping Street, Fashion Ave</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Email: hello@dripmart.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DripMart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

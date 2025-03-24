@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - DripMart</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/messages.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="DripMart Logo">
+                    DripMart
+                </a>
+                <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link cart-icon">
+                            Cart
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <h1 class="mb-4">Your Shopping Cart</h1>
+        
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <table class="cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Cart items will be dynamically rendered by JavaScript -->
+                                <tr>
+                                    <td colspan="4" class="text-center">Your cart is empty</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="text-center mt-4">
+                            <a href="products.html" class="btn btn-outline">Continue Shopping</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-lg-4">
+                <div class="card cart-summary">
+                    <div class="card-body">
+                        <h3 class="card-title">Order Summary</h3>
+                        
+                        <div class="cart-summary-row">
+                            <span>Subtotal</span>
+                            <span class="cart-subtotal">$0.00</span>
+                        </div>
+                        
+                        <div class="cart-summary-row">
+                            <span>Shipping</span>
+                            <span class="cart-shipping">$0.00</span>
+                        </div>
+                        
+                        <div class="cart-summary-row cart-total">
+                            <span>Total</span>
+                            <span class="cart-total-value">$0.00</span>
+                        </div>
+                        
+                        <a href="checkout.html" class="btn btn-primary btn-block mt-4">Proceed to Checkout</a>
+                    </div>
+                </div>
+                
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Have a Promo Code?</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Enter code">
+                            <button class="btn btn-outline">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">DripMart</h4>
+                    <p>Your one-stop shop for stylish essentials. We bring you the best in fashion, tech, and lifestyle products.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>123 Shopping Street, Fashion Ave</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Email: hello@dripmart.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DripMart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

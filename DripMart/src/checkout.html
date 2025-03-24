@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - DripMart</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/messages.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="DripMart Logo">
+                    DripMart
+                </a>
+                <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link cart-icon">
+                            Cart
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <h1 class="mb-4">Checkout</h1>
+        
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Shipping Information</h3>
+                        
+                        <form id="checkout-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="first-name">First Name</label>
+                                        <input type="text" id="first-name" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="last-name">Last Name</label>
+                                        <input type="text" id="last-name" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Street Address</label>
+                                <input type="text" id="address" class="form-control" required>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" id="city" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="state">State</label>
+                                        <input type="text" id="state" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="zip">ZIP Code</label>
+                                        <input type="text" id="zip" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <hr class="my-4">
+                            
+                            <h3 class="card-title">Payment Method</h3>
+                            
+                            <div class="payment-methods">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="payment" id="credit-card" checked>
+                                    <label class="form-check-label" for="credit-card">
+                                        Credit Card
+                                    </label>
+                                </div>
+                                
+                                <div id="credit-card-fields">
+                                    <div class="form-group">
+                                        <label for="card-number">Card Number</label>
+                                        <input type="text" id="card-number" class="form-control" placeholder="1234 5678 9012 3456" required>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="card-expiry">Expiration Date</label>
+                                                <input type="text" id="card-expiry" class="form-control" placeholder="MM/YY" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="card-cvv">CVV</label>
+                                                <input type="text" id="card-cvv" class="form-control" placeholder="123" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="payment" id="paypal">
+                                    <label class="form-check-label" for="paypal">
+                                        PayPal
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-lg-4">
+                <div class="card cart-summary">
+                    <div class="card-body">
+                        <h3 class="card-title">Order Summary</h3>
+                        
+                        <div id="checkout-items">
+                            <!-- Checkout items will be dynamically rendered by JavaScript -->
+                        </div>
+                        
+                        <hr>
+                        
+                        <div class="cart-summary-row">
+                            <span>Subtotal</span>
+                            <span class="cart-subtotal">$0.00</span>
+                        </div>
+                        
+                        <div class="cart-summary-row">
+                            <span>Shipping</span>
+                            <span class="cart-shipping">$0.00</span>
+                        </div>
+                        
+                        <div class="cart-summary-row cart-total">
+                            <span>Total</span>
+                            <span class="cart-total-value">$0.00</span>
+                        </div>
+                        
+                        <button id="place-order" class="btn btn-primary btn-block mt-4">Place Order</button>
+                        <a href="cart.html" class="btn btn-outline btn-block mt-2">Return to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">DripMart</h4>
+                    <p>Your one-stop shop for stylish essentials. We bring you the best in fashion, tech, and lifestyle products.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>123 Shopping Street, Fashion Ave</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Email: hello@dripmart.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DripMart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

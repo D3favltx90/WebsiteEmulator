@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Headphones - DripMart</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/messages.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="DripMart Logo">
+                    DripMart
+                </a>
+                <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link cart-icon">
+                            Cart
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="product-details">
+            <div class="product-gallery">
+                <img src="images/products/headphones.jpg" alt="Premium Headphones" class="product-gallery-main">
+                <div class="product-gallery-thumbs">
+                    <img src="images/products/headphones.jpg" alt="Premium Headphones" class="product-thumb active">
+                    <img src="images/products/headphones.jpg" alt="Premium Headphones Side View" class="product-thumb">
+                    <img src="images/products/headphones.jpg" alt="Premium Headphones Top View" class="product-thumb">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1 class="product-title">Premium Headphones</h1>
+                <div class="product-rating">★★★★★ <span class="text-muted">(18 reviews)</span></div>
+                <div class="product-price" data-price="79.99"><span class="original-price">$99.99</span>$79.99</div>
+                <p class="mt-4">Experience crystal clear sound with our premium wireless headphones. Featuring noise cancellation technology, comfortable ear cushions, and long battery life.</p>
+                
+                <div class="product-options">
+                    <label class="option-label">Color</label>
+                    <select class="option-select">
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Blue</option>
+                    </select>
+                    
+                    <label class="option-label">Quantity</label>
+                    <div class="quantity-input">
+                        <span class="quantity-btn" data-action="decrease">-</span>
+                        <input type="text" class="quantity-value" value="1" readonly>
+                        <span class="quantity-btn" data-action="increase">+</span>
+                    </div>
+                </div>
+                
+                <a href="#" class="btn btn-primary btn-lg add-to-cart-btn" data-id="1">Add to Cart</a>
+                
+                <div class="product-meta mt-4">
+                    <p><strong>SKU:</strong> HDPH-001</p>
+                    <p><strong>Category:</strong> <a href="products.html?category=tech">Tech</a></p>
+                    <p><strong>Tags:</strong> <a href="#">Headphones</a>, <a href="#">Audio</a>, <a href="#">Wireless</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-tabs mt-5">
+            <ul class="nav-tabs">
+                <li class="nav-item">
+                    <a href="#description" class="nav-link active">Description</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#specifications" class="nav-link">Specifications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#reviews" class="nav-link">Reviews (18)</a>
+                </li>
+            </ul>
+            
+            <div class="tab-content">
+                <div id="description" class="tab-pane active">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Product Description</h3>
+                            <p>Experience audio like never before with our Premium Headphones. Designed for audiophiles and casual listeners alike, these headphones deliver exceptional sound quality with deep bass and crisp highs.</p>
+                            
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Active Noise Cancellation blocks out external sounds</li>
+                                <li>Bluetooth 5.0 for stable wireless connection</li>
+                                <li>Up to 30 hours of battery life</li>
+                                <li>Quick charge feature - 10 minutes charge for 3 hours playback</li>
+                                <li>Memory foam ear cushions for extended comfort</li>
+                                <li>Built-in microphone for hands-free calls</li>
+                                <li>Compatible with voice assistants</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="specifications" class="tab-pane">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Technical Specifications</h3>
+                            <table class="specs-table">
+                                <tbody>
+                                    <tr>
+                                        <th>Driver Size</th>
+                                        <td>40mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Frequency Response</th>
+                                        <td>20Hz - 20kHz</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Impedance</th>
+                                        <td>32 Ohms</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Connectivity</th>
+                                        <td>Bluetooth 5.0, 3.5mm jack</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Battery</th>
+                                        <td>500mAh, up to 30 hours playback</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Weight</th>
+                                        <td>250g</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Dimensions</th>
+                                        <td>18 x 15 x 8 cm</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Package Contents</th>
+                                        <td>Headphones, Carrying Case, USB-C Charging Cable, 3.5mm Audio Cable, User Manual</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="reviews" class="tab-pane">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Customer Reviews</h3>
+                            <div class="overall-rating mb-4">
+                                <div class="rating-summary">
+                                    <div class="rating-average">4.8</div>
+                                    <div class="rating-stars">★★★★★</div>
+                                    <div class="rating-count">Based on 18 reviews</div>
+                                </div>
+                            </div>
+                            
+                            <div class="review-list">
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <div class="review-rating">★★★★★</div>
+                                        <div class="review-author">John D.</div>
+                                        <div class="review-date">2 weeks ago</div>
+                                    </div>
+                                    <h4 class="review-title">Amazing sound quality!</h4>
+                                    <p class="review-text">These headphones exceeded my expectations. The sound quality is incredible, with deep bass and clear highs. The noise cancellation works perfectly in noisy environments.</p>
+                                </div>
+                                
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <div class="review-rating">★★★★☆</div>
+                                        <div class="review-author">Sarah M.</div>
+                                        <div class="review-date">1 month ago</div>
+                                    </div>
+                                    <h4 class="review-title">Great headphones, comfortable fit</h4>
+                                    <p class="review-text">Really impressed with these headphones. The sound is excellent and they're very comfortable to wear for extended periods. Battery life is as advertised. Only giving 4 stars because the app is a bit buggy.</p>
+                                </div>
+                                
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <div class="review-rating">★★★★★</div>
+                                        <div class="review-author">Michael T.</div>
+                                        <div class="review-date">2 months ago</div>
+                                    </div>
+                                    <h4 class="review-title">Worth every penny</h4>
+                                    <p class="review-text">I've tried many headphones over the years, and these are by far the best. The noise cancellation is outstanding, and the sound quality is on par with much more expensive models.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <a href="#" class="btn btn-outline">Read All Reviews</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section class="related-products mt-5">
+            <h3 class="text-center mb-4">You May Also Like</h3>
+            <div class="products-grid">
+                <div class="card product-card">
+                    <img src="images/products/watch.jpg" alt="Minimalist Watch" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title product-title">Minimalist Watch</h3>
+                        <div class="product-rating">★★★★☆</div>
+                        <div class="product-price" data-price="119.99">$119.99</div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="product-detail.html?id=4" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="card product-card">
+                    <img src="images/products/sunglasses.jpg" alt="Designer Sunglasses" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title product-title">Designer Sunglasses</h3>
+                        <div class="product-rating">★★★★☆</div>
+                        <div class="product-price" data-price="49.99">$49.99</div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="product-detail.html?id=6" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="card product-card">
+                    <div class="sale-badge">Sale</div>
+                    <img src="images/products/backpack.jpg" alt="Travel Backpack" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title product-title">Travel Backpack</h3>
+                        <div class="product-rating">★★★★★</div>
+                        <div class="product-price" data-price="59.99"><span class="original-price">$79.99</span>$59.99</div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="product-detail.html?id=5" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">DripMart</h4>
+                    <p>Your one-stop shop for stylish essentials. We bring you the best in fashion, tech, and lifestyle products.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>123 Shopping Street, Fashion Ave</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Email: hello@dripmart.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DripMart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
