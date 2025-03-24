@@ -1,6 +1,8 @@
-# EchoTeck Website Template
+# Website Emulator
 
-A modern, responsive website template with Docker and Nginx configuration for easy deployment.
+A modern, responsive website template with Docker and Nginx configuration for easy deployment. This project is a simple framework for creating websites for common web technologies so automated workflows can generate web traffic to season a virutal environment for testing, red teaming, and other security testing.
+
+EchoTeck and DripMart are the first two websites that have been created which are simple examples. Additional sites will be added over time. 
 
 ## Project Structure
 
