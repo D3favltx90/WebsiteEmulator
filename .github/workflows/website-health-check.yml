@@ -27,9 +27,13 @@ jobs:
           push: false
           tags: website_emulator:latest
 
+      - name: Verify image exists
+        run: |
+          docker image ls
+          
       - name: Start the Web App with Docker Compose
         run: |
-          docker run -d -p 80:80 website_emulator
+          docker run -d -p 80:80 website_emulator:latest
    
       - name: Wait for the Application to Start
         run: sleep 10  # Adjust this time as needed
