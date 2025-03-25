@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch History - VidStreamerz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/notifications.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-play-circle"></i>
+                    Vid<span>Streamerz</span>
+                </a>
+                
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Search videos...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                
+                <button id="menu-toggle" class="menu-toggle d-md-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul id="nav-menu" class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="trending.html"><i class="fas fa-fire"></i> Trending</a></li>
+                    <li><a href="library.html"><i class="fas fa-folder"></i> Library</a></li>
+                    <li><a href="history.html" class="active"><i class="fas fa-history"></i> History</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="history-header">
+                <h1 class="page-title">Watch History</h1>
+                <div class="history-actions">
+                    <button id="clear-history" class="btn btn-outline">
+                        <i class="fas fa-trash"></i> Clear All History
+                    </button>
+                </div>
+            </div>
+            
+            <div class="history-filters">
+                <div class="history-search">
+                    <input type="text" class="form-control" placeholder="Search watch history">
+                    <button class="history-search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="history-date-filter">
+                    <select class="form-control">
+                        <option value="all">All time</option>
+                        <option value="today">Today</option>
+                        <option value="week">This week</option>
+                        <option value="month">This month</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="empty-state" id="empty-history" style="display: none;">
+                <div class="empty-icon">
+                    <i class="fas fa-history"></i>
+                </div>
+                <h3>No watch history</h3>
+                <p>Videos you watch will appear here</p>
+                <a href="index.html" class="btn">Watch videos</a>
+            </div>
+            
+            <div class="history-list">
+                <!-- Today -->
+                <div class="history-day">
+                    <h3 class="history-date">Today</h3>
+                    
+                    <div class="history-videos">
+                        <!-- History Item 1 -->
+                        <div class="history-item">
+                            <div class="history-thumbnail">
+                                <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                                <div class="video-duration">10:15</div>
+                            </div>
+                            <div class="history-info">
+                                <h3 class="history-title">Amazing Nature Compilation 2023</h3>
+                                <div class="history-channel">Nature Channel</div>
+                                <div class="history-meta">
+                                    <span class="history-views">1.5K views</span>
+                                    <span class="history-time">Watched 2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="history-actions-menu">
+                                <button class="history-action-btn">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div class="history-dropdown">
+                                    <a href="video.html?id=1" class="history-dropdown-item">
+                                        <i class="fas fa-play-circle"></i> Watch again
+                                    </a>
+                                    <a href="#" class="history-dropdown-item add-to-playlist">
+                                        <i class="fas fa-list"></i> Add to playlist
+                                    </a>
+                                    <a href="#" class="history-dropdown-item remove-item">
+                                        <i class="fas fa-times"></i> Remove from history
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- History Item 2 -->
+                        <div class="history-item">
+                            <div class="history-thumbnail">
+                                <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                                <div class="video-duration">5:42</div>
+                            </div>
+                            <div class="history-info">
+                                <h3 class="history-title">Top 10 Programming Tips and Tricks</h3>
+                                <div class="history-channel">CodeMaster</div>
+                                <div class="history-meta">
+                                    <span class="history-views">8.7K views</span>
+                                    <span class="history-time">Watched 5 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="history-actions-menu">
+                                <button class="history-action-btn">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div class="history-dropdown">
+                                    <a href="video.html?id=2" class="history-dropdown-item">
+                                        <i class="fas fa-play-circle"></i> Watch again
+                                    </a>
+                                    <a href="#" class="history-dropdown-item add-to-playlist">
+                                        <i class="fas fa-list"></i> Add to playlist
+                                    </a>
+                                    <a href="#" class="history-dropdown-item remove-item">
+                                        <i class="fas fa-times"></i> Remove from history
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Yesterday -->
+                <div class="history-day">
+                    <h3 class="history-date">Yesterday</h3>
+                    
+                    <div class="history-videos">
+                        <!-- History Item 3 -->
+                        <div class="history-item">
+                            <div class="history-thumbnail">
+                                <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                                <div class="video-duration">15:30</div>
+                            </div>
+                            <div class="history-info">
+                                <h3 class="history-title">Beginner's Guide to Cooking Italian Food</h3>
+                                <div class="history-channel">Cooking Experts</div>
+                                <div class="history-meta">
+                                    <span class="history-views">12.5K views</span>
+                                    <span class="history-time">Watched yesterday</span>
+                                </div>
+                            </div>
+                            <div class="history-actions-menu">
+                                <button class="history-action-btn">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div class="history-dropdown">
+                                    <a href="video.html?id=3" class="history-dropdown-item">
+                                        <i class="fas fa-play-circle"></i> Watch again
+                                    </a>
+                                    <a href="#" class="history-dropdown-item add-to-playlist">
+                                        <i class="fas fa-list"></i> Add to playlist
+                                    </a>
+                                    <a href="#" class="history-dropdown-item remove-item">
+                                        <i class="fas fa-times"></i> Remove from history
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- This Week -->
+                <div class="history-day">
+                    <h3 class="history-date">This Week</h3>
+                    
+                    <div class="history-videos">
+                        <!-- History Item 4 -->
+                        <div class="history-item">
+                            <div class="history-thumbnail">
+                                <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                                <div class="video-duration">8:22</div>
+                            </div>
+                            <div class="history-info">
+                                <h3 class="history-title">Workout Routine for Beginners</h3>
+                                <div class="history-channel">FitLife</div>
+                                <div class="history-meta">
+                                    <span class="history-views">24.3K views</span>
+                                    <span class="history-time">Watched 3 days ago</span>
+                                </div>
+                            </div>
+                            <div class="history-actions-menu">
+                                <button class="history-action-btn">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div class="history-dropdown">
+                                    <a href="video.html?id=4" class="history-dropdown-item">
+                                        <i class="fas fa-play-circle"></i> Watch again
+                                    </a>
+                                    <a href="#" class="history-dropdown-item add-to-playlist">
+                                        <i class="fas fa-list"></i> Add to playlist
+                                    </a>
+                                    <a href="#" class="history-dropdown-item remove-item">
+                                        <i class="fas fa-times"></i> Remove from history
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- History Item 5 -->
+                        <div class="history-item">
+                            <div class="history-thumbnail">
+                                <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                                <div class="video-duration">7:15</div>
+                            </div>
+                            <div class="history-info">
+                                <h3 class="history-title">How to Make Perfect Pancakes Every Time</h3>
+                                <div class="history-channel">Cooking 101</div>
+                                <div class="history-meta">
+                                    <span class="history-views">45K views</span>
+                                    <span class="history-time">Watched 4 days ago</span>
+                                </div>
+                            </div>
+                            <div class="history-actions-menu">
+                                <button class="history-action-btn">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div class="history-dropdown">
+                                    <a href="video.html?id=5" class="history-dropdown-item">
+                                        <i class="fas fa-play-circle"></i> Watch again
+                                    </a>
+                                    <a href="#" class="history-dropdown-item add-to-playlist">
+                                        <i class="fas fa-list"></i> Add to playlist
+                                    </a>
+                                    <a href="#" class="history-dropdown-item remove-item">
+                                        <i class="fas fa-times"></i> Remove from history
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more-container">
+                <button class="load-more-btn">Load More</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 class="footer-title">VidStreamerz</h3>
+                    <p>Share and discover amazing videos from around the world.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="trending.html">Trending</a></li>
+                        <li><a href="library.html">Library</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Gaming</a></li>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">Tech</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">About</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 VidStreamerz. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // History page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle dropdown menus
+            const actionButtons = document.querySelectorAll('.history-action-btn');
+            
+            actionButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const dropdown = this.nextElementSibling;
+                    dropdown.classList.toggle('active');
+                    
+                    // Close other dropdowns
+                    actionButtons.forEach(otherButton => {
+                        if (otherButton !== button) {
+                            otherButton.nextElementSibling.classList.remove('active');
+                        }
+                    });
+                });
+            });
+            
+            // Close dropdowns when clicking elsewhere
+            document.addEventListener('click', function() {
+                document.querySelectorAll('.history-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            });
+            
+            // Handle remove from history
+            const removeItems = document.querySelectorAll('.remove-item');
+            removeItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const historyItem = this.closest('.history-item');
+                    historyItem.remove();
+                    
+                    // Check if the history day has any items left
+                    const parentDay = this.closest('.history-day');
+                    const remainingItems = parentDay.querySelectorAll('.history-item');
+                    if (remainingItems.length === 0) {
+                        parentDay.remove();
+                    }
+                    
+                    // Check if there are any history days left
+                    const remainingDays = document.querySelectorAll('.history-day');
+                    if (remainingDays.length === 0) {
+                        document.getElementById('empty-history').style.display = 'flex';
+                        document.querySelector('.history-list').style.display = 'none';
+                        document.querySelector('.load-more-container').style.display = 'none';
+                    }
+                    
+                    showNotification('Video removed from history');
+                });
+            });
+            
+            // Handle clear all history
+            const clearHistoryBtn = document.getElementById('clear-history');
+            clearHistoryBtn.addEventListener('click', function() {
+                const confirmClear = confirm('Are you sure you want to clear all watch history?');
+                if (confirmClear) {
+                    document.querySelector('.history-list').innerHTML = '';
+                    document.getElementById('empty-history').style.display = 'flex';
+                    document.querySelector('.load-more-container').style.display = 'none';
+                    showNotification('Watch history cleared');
+                }
+            });
+            
+            // Notification function
+            function showNotification(message, type = 'info') {
+                const notification = document.createElement('div');
+                notification.className = `notification ${type}`;
+                notification.textContent = message;
+                
+                document.body.appendChild(notification);
+                
+                // Trigger animation
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 10);
+                
+                // Remove notification after delay
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html> 

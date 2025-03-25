@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Library - VidStreamerz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/notifications.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-play-circle"></i>
+                    Vid<span>Streamerz</span>
+                </a>
+                
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Search videos...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                
+                <button id="menu-toggle" class="menu-toggle d-md-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul id="nav-menu" class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="trending.html"><i class="fas fa-fire"></i> Trending</a></li>
+                    <li><a href="library.html" class="active"><i class="fas fa-folder"></i> Library</a></li>
+                    <li><a href="history.html"><i class="fas fa-history"></i> History</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Your Library</h1>
+            
+            <div class="tabs">
+                <button class="tab active" data-tab="saved">Saved Videos</button>
+                <button class="tab" data-tab="liked">Liked Videos</button>
+                <button class="tab" data-tab="playlists">Playlists</button>
+            </div>
+            
+            <div class="tab-content active" id="saved-content">
+                <div class="empty-state" id="empty-saved" style="display: none;">
+                    <div class="empty-icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                    <h3>No saved videos yet</h3>
+                    <p>Videos you save will appear here</p>
+                    <a href="index.html" class="btn">Browse videos</a>
+                </div>
+                
+                <div class="videos-grid">
+                    <!-- Saved Video 1 -->
+                    <div class="video-card" data-video-id="5">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                            <div class="video-duration">7:15</div>
+                        </div>
+                        <div class="video-card-info">
+                            <h3 class="video-card-title">How to Make Perfect Pancakes Every Time</h3>
+                            <div class="video-card-channel">Cooking 101</div>
+                            <div class="video-card-meta">
+                                <span class="video-card-views"><span class="video-watch-count" data-count="45000">45K</span> views</span>
+                                <span class="video-card-date">1 month ago</span>
+                            </div>
+                            <div class="video-card-actions">
+                                <button class="action-icon remove-saved">
+                                    <i class="fas fa-times"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Saved Video 2 -->
+                    <div class="video-card" data-video-id="8">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                            <div class="video-duration">15:30</div>
+                        </div>
+                        <div class="video-card-info">
+                            <h3 class="video-card-title">Learn JavaScript in 15 Minutes</h3>
+                            <div class="video-card-channel">CodeMaster</div>
+                            <div class="video-card-meta">
+                                <span class="video-card-views"><span class="video-watch-count" data-count="128000">128K</span> views</span>
+                                <span class="video-card-date">1 month ago</span>
+                            </div>
+                            <div class="video-card-actions">
+                                <button class="action-icon remove-saved">
+                                    <i class="fas fa-times"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Saved Video 3 -->
+                    <div class="video-card" data-video-id="7">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                            <div class="video-duration">9:05</div>
+                        </div>
+                        <div class="video-card-info">
+                            <h3 class="video-card-title">Top 5 Exercises for Stronger Core</h3>
+                            <div class="video-card-channel">FitnessPro</div>
+                            <div class="video-card-meta">
+                                <span class="video-card-views"><span class="video-watch-count" data-count="67000">67K</span> views</span>
+                                <span class="video-card-date">3 weeks ago</span>
+                            </div>
+                            <div class="video-card-actions">
+                                <button class="action-icon remove-saved">
+                                    <i class="fas fa-times"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="liked-content">
+                <div class="empty-state" id="empty-liked" style="display: none;">
+                    <div class="empty-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <h3>No liked videos yet</h3>
+                    <p>Videos you like will appear here</p>
+                    <a href="index.html" class="btn">Browse videos</a>
+                </div>
+                
+                <div class="videos-grid">
+                    <!-- Liked Video 1 -->
+                    <div class="video-card" data-video-id="1">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                            <div class="video-duration">10:15</div>
+                        </div>
+                        <div class="video-card-info">
+                            <h3 class="video-card-title">Amazing Nature Compilation 2023</h3>
+                            <div class="video-card-channel">Nature Channel</div>
+                            <div class="video-card-meta">
+                                <span class="video-card-views"><span class="video-watch-count" data-count="1542">1.5K</span> views</span>
+                                <span class="video-card-date">2 weeks ago</span>
+                            </div>
+                            <div class="video-card-actions">
+                                <button class="action-icon unlike">
+                                    <i class="fas fa-thumbs-down"></i> Unlike
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Liked Video 2 -->
+                    <div class="video-card" data-video-id="4">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                            <div class="video-duration">8:22</div>
+                        </div>
+                        <div class="video-card-info">
+                            <h3 class="video-card-title">Workout Routine for Beginners</h3>
+                            <div class="video-card-channel">FitLife</div>
+                            <div class="video-card-meta">
+                                <span class="video-card-views"><span class="video-watch-count" data-count="24300">24.3K</span> views</span>
+                                <span class="video-card-date">3 weeks ago</span>
+                            </div>
+                            <div class="video-card-actions">
+                                <button class="action-icon unlike">
+                                    <i class="fas fa-thumbs-down"></i> Unlike
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="playlists-content">
+                <div class="empty-state" id="empty-playlists">
+                    <div class="empty-icon">
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <h3>No playlists yet</h3>
+                    <p>Create playlists to organize your favorite videos</p>
+                    <button class="btn create-playlist-btn">Create Playlist</button>
+                </div>
+                
+                <div class="create-playlist-form" style="display: none;">
+                    <h3>Create a New Playlist</h3>
+                    <div class="form-group">
+                        <label for="playlist-name">Playlist Name</label>
+                        <input type="text" id="playlist-name" class="form-control" placeholder="Enter a name for your playlist">
+                    </div>
+                    <div class="form-group">
+                        <label for="playlist-description">Description (optional)</label>
+                        <textarea id="playlist-description" class="form-control" rows="3" placeholder="Add a description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Privacy</label>
+                        <div class="radio-group">
+                            <label class="radio">
+                                <input type="radio" name="privacy" value="public" checked> Public
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="privacy" value="private"> Private
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn btn-outline cancel-playlist">Cancel</button>
+                        <button class="btn create-playlist-submit">Create</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 class="footer-title">VidStreamerz</h3>
+                    <p>Share and discover amazing videos from around the world.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="trending.html">Trending</a></li>
+                        <li><a href="library.html">Library</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Gaming</a></li>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">Tech</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">About</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 VidStreamerz. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Library page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching functionality
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const target = this.getAttribute('data-tab');
+                    
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show corresponding content
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    document.getElementById(`${target}-content`).classList.add('active');
+                });
+            });
+            
+            // Handle remove from saved
+            const removeSavedButtons = document.querySelectorAll('.remove-saved');
+            removeSavedButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const videoCard = this.closest('.video-card');
+                    videoCard.remove();
+                    
+                    // Check if there are any videos left
+                    const remainingVideos = document.querySelectorAll('#saved-content .video-card');
+                    if (remainingVideos.length === 0) {
+                        document.getElementById('empty-saved').style.display = 'flex';
+                    }
+                    
+                    showNotification('Video removed from saved videos');
+                });
+            });
+            
+            // Handle unlike
+            const unlikeButtons = document.querySelectorAll('.unlike');
+            unlikeButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const videoCard = this.closest('.video-card');
+                    videoCard.remove();
+                    
+                    // Check if there are any videos left
+                    const remainingVideos = document.querySelectorAll('#liked-content .video-card');
+                    if (remainingVideos.length === 0) {
+                        document.getElementById('empty-liked').style.display = 'flex';
+                    }
+                    
+                    showNotification('Video removed from liked videos');
+                });
+            });
+            
+            // Handle create playlist
+            const createPlaylistBtn = document.querySelector('.create-playlist-btn');
+            const cancelPlaylistBtn = document.querySelector('.cancel-playlist');
+            const createPlaylistForm = document.querySelector('.create-playlist-form');
+            const emptyPlaylists = document.getElementById('empty-playlists');
+            
+            if (createPlaylistBtn) {
+                createPlaylistBtn.addEventListener('click', function() {
+                    emptyPlaylists.style.display = 'none';
+                    createPlaylistForm.style.display = 'block';
+                });
+            }
+            
+            if (cancelPlaylistBtn) {
+                cancelPlaylistBtn.addEventListener('click', function() {
+                    createPlaylistForm.style.display = 'none';
+                    emptyPlaylists.style.display = 'flex';
+                });
+            }
+            
+            // Handle playlist creation
+            const createPlaylistSubmit = document.querySelector('.create-playlist-submit');
+            if (createPlaylistSubmit) {
+                createPlaylistSubmit.addEventListener('click', function() {
+                    const playlistName = document.getElementById('playlist-name').value.trim();
+                    if (playlistName) {
+                        // In a real app, we would save this to a database
+                        // For this demo, just show a notification
+                        showNotification('Playlist created successfully');
+                        
+                        // Reset form and show empty state
+                        document.getElementById('playlist-name').value = '';
+                        document.getElementById('playlist-description').value = '';
+                        createPlaylistForm.style.display = 'none';
+                        emptyPlaylists.style.display = 'flex';
+                    } else {
+                        showNotification('Please enter a playlist name', 'error');
+                    }
+                });
+            }
+            
+            // Notification function
+            function showNotification(message, type = 'info') {
+                const notification = document.createElement('div');
+                notification.className = `notification ${type}`;
+                notification.textContent = message;
+                
+                document.body.appendChild(notification);
+                
+                // Trigger animation
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 10);
+                
+                // Remove notification after delay
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html> 

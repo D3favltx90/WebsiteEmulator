@@ -1,0 +1,163 @@
+/* Notifications CSS for VidStreamerz */
+
+:root {
+  --notification-info: #3498db;
+  --notification-success: #2ecc71;
+  --notification-warning: #f39c12;
+  --notification-error: #e74c3c;
+  --notification-bg: #fff;
+  --notification-text: #333;
+  --notification-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+  --notification-bg: #2d3748;
+  --notification-text: #f7fafc;
+  --notification-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Base notification styling */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 350px;
+  padding: 12px 20px;
+  background-color: var(--notification-bg);
+  color: var(--notification-text);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--notification-shadow);
+  z-index: 1000;
+  font-size: 0.9rem;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.notification.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Notification icons */
+.notification::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+/* Notification types */
+.notification.info {
+  border-left: 4px solid var(--notification-info);
+}
+
+.notification.info::before {
+  content: "\f05a";
+  color: var(--notification-info);
+}
+
+.notification.success {
+  border-left: 4px solid var(--notification-success);
+}
+
+.notification.success::before {
+  content: "\f058";
+  color: var(--notification-success);
+}
+
+.notification.warning {
+  border-left: 4px solid var(--notification-warning);
+}
+
+.notification.warning::before {
+  content: "\f071";
+  color: var(--notification-warning);
+}
+
+.notification.error {
+  border-left: 4px solid var(--notification-error);
+}
+
+.notification.error::before {
+  content: "\f057";
+  color: var(--notification-error);
+}
+
+/* Notification stacking */
+.notification:nth-child(2) {
+  bottom: 80px;
+}
+
+.notification:nth-child(3) {
+  bottom: 140px;
+}
+
+/* Notification close button */
+.notification.with-close {
+  padding-right: 40px;
+  pointer-events: auto;
+}
+
+.notification-close {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--notification-text);
+  opacity: 0.5;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.notification-close:hover {
+  opacity: 1;
+}
+
+/* Animation for entering and exiting */
+@keyframes notification-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes notification-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.notification.animate-in {
+  animation: notification-in 0.3s forwards;
+}
+
+.notification.animate-out {
+  animation: notification-out 0.3s forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .notification {
+    max-width: calc(100vw - 40px);
+    right: 10px;
+    left: 10px;
+    text-align: center;
+    justify-content: center;
+  }
+} 

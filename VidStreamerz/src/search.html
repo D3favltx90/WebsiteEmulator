@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - VidStreamerz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/notifications.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-play-circle"></i>
+                    Vid<span>Streamerz</span>
+                </a>
+                
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Search videos...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                
+                <button id="menu-toggle" class="menu-toggle d-md-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul id="nav-menu" class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="trending.html"><i class="fas fa-fire"></i> Trending</a></li>
+                    <li><a href="library.html"><i class="fas fa-folder"></i> Library</a></li>
+                    <li><a href="history.html"><i class="fas fa-history"></i> History</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="search-header">
+                <h1 class="page-title">Search Results: <span id="search-query">...</span></h1>
+                <div class="search-info">
+                    <span id="results-count">About 125 results</span>
+                </div>
+            </div>
+            
+            <div class="search-filters">
+                <div class="filter-section">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Videos</button>
+                    <button class="filter-btn">Channels</button>
+                    <button class="filter-btn">Playlists</button>
+                </div>
+                
+                <div class="sort-section">
+                    <label>Sort by: </label>
+                    <select id="sort-order" class="form-control">
+                        <option value="relevance">Relevance</option>
+                        <option value="date">Upload date</option>
+                        <option value="views">View count</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="search-results">
+                <div class="empty-state" id="empty-results" style="display: none;">
+                    <div class="empty-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>No results found</h3>
+                    <p>Try different keywords or check your spelling</p>
+                </div>
+                
+                <!-- Search Results List -->
+                <div class="results-list">
+                    <!-- Search Result Item 1 -->
+                    <div class="search-result-item">
+                        <div class="result-thumbnail">
+                            <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                            <div class="video-duration">8:42</div>
+                        </div>
+                        <div class="result-info">
+                            <h3 class="result-title">How to Create Amazing Web Animations with CSS</h3>
+                            <div class="result-meta">
+                                <span class="result-views">42K views</span>
+                                <span class="result-date">2 months ago</span>
+                            </div>
+                            <div class="result-channel">
+                                <img src="images/channel-avatar.jpg" alt="Channel Avatar" class="channel-avatar">
+                                <span class="channel-name">WebDev Mastery</span>
+                            </div>
+                            <div class="result-description">
+                                Learn how to create stunning animations for your website using only CSS. This tutorial covers keyframes, transitions, transforms and more.
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <button class="result-action-btn" data-video-id="1">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="result-dropdown">
+                                <a href="video.html?id=1" class="result-dropdown-item">
+                                    <i class="fas fa-play-circle"></i> Watch now
+                                </a>
+                                <a href="#" class="result-dropdown-item save-video" data-video-id="1">
+                                    <i class="fas fa-bookmark"></i> Save to library
+                                </a>
+                                <a href="#" class="result-dropdown-item add-to-playlist" data-video-id="1">
+                                    <i class="fas fa-list"></i> Add to playlist
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Result Item 2 -->
+                    <div class="search-result-item">
+                        <div class="result-thumbnail">
+                            <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                            <div class="video-duration">15:20</div>
+                        </div>
+                        <div class="result-info">
+                            <h3 class="result-title">JavaScript DOM Manipulation for Beginners</h3>
+                            <div class="result-meta">
+                                <span class="result-views">105K views</span>
+                                <span class="result-date">5 months ago</span>
+                            </div>
+                            <div class="result-channel">
+                                <img src="images/channel-avatar.jpg" alt="Channel Avatar" class="channel-avatar">
+                                <span class="channel-name">CodeMaster</span>
+                            </div>
+                            <div class="result-description">
+                                This tutorial covers all the basics of manipulating the DOM with JavaScript. Learn about selecting elements, changing content, event listeners and more.
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <button class="result-action-btn" data-video-id="2">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="result-dropdown">
+                                <a href="video.html?id=2" class="result-dropdown-item">
+                                    <i class="fas fa-play-circle"></i> Watch now
+                                </a>
+                                <a href="#" class="result-dropdown-item save-video" data-video-id="2">
+                                    <i class="fas fa-bookmark"></i> Save to library
+                                </a>
+                                <a href="#" class="result-dropdown-item add-to-playlist" data-video-id="2">
+                                    <i class="fas fa-list"></i> Add to playlist
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Result Item 3 (Channel) -->
+                    <div class="search-result-item channel-result">
+                        <div class="result-channel-avatar">
+                            <img src="images/channel-avatar.jpg" alt="Channel">
+                        </div>
+                        <div class="result-info">
+                            <h3 class="result-title">Web Development Academy</h3>
+                            <div class="result-meta">
+                                <span class="channel-subscribers">568K subscribers</span>
+                                <span class="channel-videos">432 videos</span>
+                            </div>
+                            <div class="result-description">
+                                The best web development tutorials, tips and tricks to help you become a professional developer.
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <button class="subscribe-btn" data-channel-id="channel3">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Result Item 4 -->
+                    <div class="search-result-item">
+                        <div class="result-thumbnail">
+                            <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                            <div class="video-duration">22:05</div>
+                        </div>
+                        <div class="result-info">
+                            <h3 class="result-title">Responsive Web Design: Mobile-First Approach</h3>
+                            <div class="result-meta">
+                                <span class="result-views">78K views</span>
+                                <span class="result-date">1 year ago</span>
+                            </div>
+                            <div class="result-channel">
+                                <img src="images/channel-avatar.jpg" alt="Channel Avatar" class="channel-avatar">
+                                <span class="channel-name">WebDev Mastery</span>
+                            </div>
+                            <div class="result-description">
+                                Learn how to implement a mobile-first approach to responsive web design. This tutorial covers media queries, flexible layouts, and responsive images.
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <button class="result-action-btn" data-video-id="4">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="result-dropdown">
+                                <a href="video.html?id=4" class="result-dropdown-item">
+                                    <i class="fas fa-play-circle"></i> Watch now
+                                </a>
+                                <a href="#" class="result-dropdown-item save-video" data-video-id="4">
+                                    <i class="fas fa-bookmark"></i> Save to library
+                                </a>
+                                <a href="#" class="result-dropdown-item add-to-playlist" data-video-id="4">
+                                    <i class="fas fa-list"></i> Add to playlist
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Result Item 5 (Playlist) -->
+                    <div class="search-result-item playlist-result">
+                        <div class="result-thumbnail playlist-thumbnail">
+                            <img src="images/video-thumbnail.jpg" alt="Playlist Thumbnail">
+                            <div class="playlist-count">
+                                <i class="fas fa-list"></i>
+                                <span>18 videos</span>
+                            </div>
+                        </div>
+                        <div class="result-info">
+                            <h3 class="result-title">Complete Web Development Course 2023</h3>
+                            <div class="result-meta">
+                                <span class="playlist-updated">Updated 2 weeks ago</span>
+                            </div>
+                            <div class="result-channel">
+                                <img src="images/channel-avatar.jpg" alt="Channel Avatar" class="channel-avatar">
+                                <span class="channel-name">CodeMaster</span>
+                            </div>
+                            <div class="result-description">
+                                A comprehensive playlist covering HTML, CSS, JavaScript, responsive design, server-side rendering, and modern frameworks.
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <a href="playlist.html?id=5" class="btn btn-outline view-playlist-btn">
+                                View playlist
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more-container">
+                <button class="load-more-btn">Load More Results</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 class="footer-title">VidStreamerz</h3>
+                    <p>Share and discover amazing videos from around the world.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="trending.html">Trending</a></li>
+                        <li><a href="library.html">Library</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Gaming</a></li>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">Tech</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">About</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 VidStreamerz. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Search page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get search query from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchQuery = urlParams.get('q');
+            
+            // Update search input with query
+            if (searchQuery) {
+                document.getElementById('search-input').value = searchQuery;
+                document.getElementById('search-query').textContent = searchQuery;
+            }
+            
+            // Toggle dropdown menus
+            const actionButtons = document.querySelectorAll('.result-action-btn');
+            
+            actionButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const dropdown = this.nextElementSibling;
+                    dropdown.classList.toggle('active');
+                    
+                    // Close other dropdowns
+                    actionButtons.forEach(otherButton => {
+                        if (otherButton !== button) {
+                            otherButton.nextElementSibling.classList.remove('active');
+                        }
+                    });
+                });
+            });
+            
+            // Close dropdowns when clicking elsewhere
+            document.addEventListener('click', function() {
+                document.querySelectorAll('.result-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            });
+            
+            // Filter buttons
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Handle filtering (placeholder)
+                    const filter = this.textContent.toLowerCase();
+                    console.log(`Filtering by: ${filter}`);
+                    
+                    // Show notification
+                    showNotification(`Filtered by: ${filter}`, 'info');
+                });
+            });
+            
+            // Save video to library
+            const saveButtons = document.querySelectorAll('.save-video');
+            saveButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const videoId = this.dataset.videoId;
+                    
+                    // Add to saved videos (function from script.js)
+                    addToSaved(videoId);
+                    
+                    // Show notification
+                    showNotification('Video saved to library', 'success');
+                });
+            });
+            
+            // Handle subscribe button
+            const subscribeButtons = document.querySelectorAll('.subscribe-btn');
+            subscribeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const channelId = this.dataset.channelId;
+                    
+                    if (this.classList.contains('subscribed')) {
+                        // Unsubscribe
+                        this.classList.remove('subscribed');
+                        this.textContent = 'Subscribe';
+                        unsubscribeFromChannel(channelId);
+                        showNotification('Unsubscribed from channel', 'info');
+                    } else {
+                        // Subscribe
+                        this.classList.add('subscribed');
+                        this.textContent = 'Subscribed';
+                        subscribeToChannel(channelId);
+                        showNotification('Subscribed to channel', 'success');
+                    }
+                });
+            });
+            
+            // Handle load more button
+            const loadMoreBtn = document.querySelector('.load-more-btn');
+            loadMoreBtn.addEventListener('click', function() {
+                // Placeholder for loading more results
+                showNotification('Loading more results...', 'info');
+                
+                // Simulate loading more results after a delay
+                setTimeout(() => {
+                    showNotification('No more results to load', 'info');
+                    loadMoreBtn.disabled = true;
+                    loadMoreBtn.textContent = 'No more results';
+                }, 1500);
+            });
+            
+            // Handle sort order change
+            const sortOrder = document.getElementById('sort-order');
+            sortOrder.addEventListener('change', function() {
+                const value = this.value;
+                console.log(`Sorting by: ${value}`);
+                showNotification(`Results sorted by ${value}`, 'info');
+            });
+        });
+    </script>
+</body>
+</html> 

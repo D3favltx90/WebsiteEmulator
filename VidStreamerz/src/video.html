@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VidStreamerz - Watch and Share Videos</title>
+    <title>Video Title - VidStreamerz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
@@ -30,7 +30,7 @@
                 </button>
                 
                 <ul id="nav-menu" class="nav-links">
-                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="trending.html"><i class="fas fa-fire"></i> Trending</a></li>
                     <li><a href="library.html"><i class="fas fa-folder"></i> Library</a></li>
                     <li><a href="history.html"><i class="fas fa-history"></i> History</a></li>
@@ -41,127 +41,60 @@
 
     <main class="main-content">
         <div class="container">
-            <section class="hero-section">
-                <h1 class="page-title">Discover Amazing Videos</h1>
-                <div class="categories">
-                    <a href="#" class="category-pill active">All</a>
-                    <a href="#" class="category-pill">Music</a>
-                    <a href="#" class="category-pill">Gaming</a>
-                    <a href="#" class="category-pill">Movies</a>
-                    <a href="#" class="category-pill">Tech</a>
-                    <a href="#" class="category-pill">Comedy</a>
-                    <a href="#" class="category-pill">Sports</a>
-                    <a href="#" class="category-pill">Science</a>
-                </div>
-            </section>
-            
-            <section class="featured-section">
-                <h2 class="section-title">Featured Video</h2>
-                <div class="video-player-container">
-                    <div class="video-player">
-                        <video id="main-video" controls poster="images/video-thumbnail.jpg">
-                            <source src="videos/big_buck_bunny_720p_30mb.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="video-info">
-                        <h2 class="video-title">Big Buck Bunny - Award Winning Animated Short Film</h2>
-                        <div class="video-meta">
-                            <span class="views"><i class="fas fa-eye"></i> <span id="watch-count">0</span> views</span>
-                            <span class="separator">•</span>
-                            <span class="upload-date">Uploaded 2 days ago</span>
-                        </div>
-                        <p class="video-description">
-                            Big Buck Bunny is a short computer-animated comedy film featuring animals of the forest, made by the Blender Institute, part of the Blender Foundation.
-                        </p>
-                        <div class="video-actions">
-                            <button id="like-btn" class="action-button">
-                                <i class="fas fa-thumbs-up"></i> Like
-                            </button>
-                            <button id="dislike-btn" class="action-button">
-                                <i class="fas fa-thumbs-down"></i> Dislike
-                            </button>
-                            <button id="share-btn" class="action-button">
-                                <i class="fas fa-share"></i> Share
-                            </button>
-                            <button id="save-btn" class="action-button">
-                                <i class="fas fa-bookmark"></i> Save
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
             <div class="main-grid">
                 <div class="content-area">
-                    <section class="trending-section">
-                        <h2 class="section-title">Trending Videos</h2>
-                        <div class="video-grid">
-                            <!-- Video Card 1 -->
-                            <div class="video-card" data-video-id="1">
-                                <div class="video-thumbnail">
-                                    <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
-                                    <div class="video-duration">10:15</div>
-                                </div>
-                                <div class="video-card-info">
-                                    <h3 class="video-card-title">Amazing Nature Compilation 2023</h3>
-                                    <div class="video-card-channel">Nature Channel</div>
-                                    <div class="video-card-meta">
-                                        <span class="video-card-views"><span class="video-watch-count" data-count="1542">1.5K</span> views</span>
-                                        <span class="video-card-date">2 weeks ago</span>
-                                    </div>
-                                </div>
+                    <div class="video-player-container">
+                        <div class="video-player">
+                            <video id="main-video" controls poster="images/video-thumbnail.jpg">
+                                <source src="videos/big_buck_bunny_720p_30mb.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-info">
+                            <h1 class="video-title">Big Buck Bunny - Award Winning Animated Short Film</h1>
+                            <div class="video-meta">
+                                <span class="views"><i class="fas fa-eye"></i> <span id="watch-count">0</span> views</span>
+                                <span class="separator">•</span>
+                                <span class="upload-date">Uploaded 2 days ago</span>
                             </div>
                             
-                            <!-- Video Card 2 -->
-                            <div class="video-card" data-video-id="2">
-                                <div class="video-thumbnail">
-                                    <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
-                                    <div class="video-duration">5:42</div>
+                            <div class="channel-info">
+                                <div class="channel-avatar">
+                                    <img src="images/channel-avatar.jpg" alt="Channel Avatar" onerror="this.src='images/default-avatar.jpg'">
                                 </div>
-                                <div class="video-card-info">
-                                    <h3 class="video-card-title">Top 10 Programming Tips and Tricks</h3>
-                                    <div class="video-card-channel">CodeMaster</div>
-                                    <div class="video-card-meta">
-                                        <span class="video-card-views"><span class="video-watch-count" data-count="8743">8.7K</span> views</span>
-                                        <span class="video-card-date">5 days ago</span>
-                                    </div>
+                                <div class="channel-details">
+                                    <h3 class="channel-name">Blender Foundation</h3>
+                                    <p class="channel-subscribers">1.2M subscribers</p>
                                 </div>
+                                <button class="subscribe-btn">Subscribe</button>
                             </div>
                             
-                            <!-- Video Card 3 -->
-                            <div class="video-card" data-video-id="3">
-                                <div class="video-thumbnail">
-                                    <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
-                                    <div class="video-duration">15:30</div>
-                                </div>
-                                <div class="video-card-info">
-                                    <h3 class="video-card-title">Beginner's Guide to Cooking Italian Food</h3>
-                                    <div class="video-card-channel">Cooking Experts</div>
-                                    <div class="video-card-meta">
-                                        <span class="video-card-views"><span class="video-watch-count" data-count="12500">12.5K</span> views</span>
-                                        <span class="video-card-date">1 month ago</span>
-                                    </div>
-                                </div>
+                            <div class="video-description">
+                                <p>
+                                    Big Buck Bunny is a short computer-animated comedy film featuring animals of the forest, made by the Blender Institute, part of the Blender Foundation.
+                                </p>
+                                <p>
+                                    The plot follows a day in the life of Big Buck Bunny, during which time he meets three bullying rodents: Frank, Rinky, and Gamera. The rodents amuse themselves by harassing helpless creatures of the forest by throwing fruits, nuts, and rocks at them.
+                                </p>
+                                <button class="show-more-btn">Show more</button>
                             </div>
                             
-                            <!-- Video Card 4 -->
-                            <div class="video-card" data-video-id="4">
-                                <div class="video-thumbnail">
-                                    <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
-                                    <div class="video-duration">8:22</div>
-                                </div>
-                                <div class="video-card-info">
-                                    <h3 class="video-card-title">Workout Routine for Beginners</h3>
-                                    <div class="video-card-channel">FitLife</div>
-                                    <div class="video-card-meta">
-                                        <span class="video-card-views"><span class="video-watch-count" data-count="24300">24.3K</span> views</span>
-                                        <span class="video-card-date">3 weeks ago</span>
-                                    </div>
-                                </div>
+                            <div class="video-actions">
+                                <button id="like-btn" class="action-button">
+                                    <i class="fas fa-thumbs-up"></i> Like
+                                </button>
+                                <button id="dislike-btn" class="action-button">
+                                    <i class="fas fa-thumbs-down"></i> Dislike
+                                </button>
+                                <button id="share-btn" class="action-button">
+                                    <i class="fas fa-share"></i> Share
+                                </button>
+                                <button id="save-btn" class="action-button">
+                                    <i class="fas fa-bookmark"></i> Save
+                                </button>
                             </div>
                         </div>
-                    </section>
+                    </div>
                     
                     <section class="comments-section">
                         <div class="comments-header">
@@ -298,7 +231,7 @@
                 
                 <aside class="sidebar">
                     <div class="sidebar-section">
-                        <h3 class="sidebar-title">Recommended Videos</h3>
+                        <h3 class="sidebar-title">Up Next</h3>
                         
                         <div class="recommended-videos">
                             <!-- Recommended Video 1 -->
@@ -365,6 +298,19 @@
                                     <div class="recommended-views">93K views • 5 days ago</div>
                                 </div>
                             </a>
+                            
+                            <!-- Recommended Video 6 -->
+                            <a href="video.html?id=10" class="recommended-video">
+                                <div class="recommended-thumbnail">
+                                    <img src="images/video-thumbnail.jpg" alt="Video Thumbnail">
+                                    <div class="recommended-duration">8:45</div>
+                                </div>
+                                <div class="recommended-info">
+                                    <h4 class="recommended-title">10 Amazing Places You Should Visit in 2023</h4>
+                                    <div class="recommended-channel">TravelGuide</div>
+                                    <div class="recommended-views">76K views • 2 weeks ago</div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </aside>
@@ -425,4 +371,4 @@
 
     <script src="js/script.js"></script>
 </body>
-</html>
+</html> 
