@@ -1,0 +1,46 @@
+name: Website Health Check
+
+on:
+  push:
+    branches:
+      - main # primary brach
+  pull_request:
+    branches:
+      - main # any pull request to main
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install docker-compose
+
+      - name: Start the Web App with Docker Compose
+        run: docker-compose up -d
+
+      - name: Wait for the Application to Start
+        run: sleep 10  # Adjust this time as needed
+
+      - name: Run Website Health Check
+        run: |
+          STATUS_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost)
+          if [[ "$STATUS_CODE" -ne "200" ]]; then
+            echo "Website Health Check Failed! Status Code: $STATUS_CODE"
+            exit 1
+          else
+            echo "Website Health Check Passed! Status Code: $STATUS_CODE"
+          fi
+
+      # Need to add checks per site checking for expected content
+
+      # Need to add checks per site checking for expected 404 page
+
+      - name: Stop the Web App with Docker Compose
+        if: always() # Ensure this runs even if previous steps failed
+        run: docker-compose down
