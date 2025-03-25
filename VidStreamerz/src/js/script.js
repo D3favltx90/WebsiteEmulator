@@ -26,6 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Video event listeners
     if (video) {
+        // Auto play video when page loads
+        video.autoplay = true;
+        video.play().catch(error => {
+            console.log('Autoplay prevented by browser:', error);
+        });
+        
         // Increment watch count when video starts playing for the first time
         let hasStartedPlaying = false;
         
@@ -39,6 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset the flag when video ends to count a new view if watched again
         video.addEventListener('ended', function() {
             hasStartedPlaying = false;
+            // Auto replay the video when it ends
+            video.play();
         });
     }
     
@@ -420,6 +428,17 @@ videoElements.forEach(video => {
         const videoElement = video.querySelector('video');
         
         if (playButton && videoElement) {
+            // Auto play video when page loads
+            videoElement.autoplay = true;
+            videoElement.play().catch(error => {
+                console.log('Autoplay prevented by browser:', error);
+            });
+            
+            // Hide play button since video is playing
+            if (playButton) {
+                playButton.style.display = 'none';
+            }
+            
             playButton.addEventListener('click', () => {
                 if (videoElement.paused) {
                     videoElement.play();
@@ -435,6 +454,10 @@ videoElements.forEach(video => {
             
             videoElement.addEventListener('ended', () => {
                 playButton.style.display = 'flex';
+                // Auto replay the video when it ends
+                videoElement.play();
+                // Hide the play button again since video is playing
+                playButton.style.display = 'none';
             });
             
             videoElement.addEventListener('click', () => {
