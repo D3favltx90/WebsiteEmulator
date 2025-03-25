@@ -40,6 +40,17 @@ RUN mkdir -p /etc/nginx/sites-enabled/
 COPY VidStreamerz/nginx/sites-available/vidstreamerz.com.conf /etc/nginx/sites-available/vidstreamerz.com.conf
 RUN ln -s /etc/nginx/sites-available/vidstreamerz.com.conf /etc/nginx/sites-enabled/
 
+## SportsBallNews Setup
+# Copy the website content to the Nginx document root
+RUN mkdir -p /usr/share/nginx/sportsballnews
+COPY SportsBallNews/src /usr/share/nginx/sportsballnews
+
+# Copy a custom Nginx configuration
+RUN mkdir -p /etc/nginx/sites-available/
+RUN mkdir -p /etc/nginx/sites-enabled/
+COPY SportsBallNews/nginx/sites-available/sportsballnews.org.conf /etc/nginx/sites-available/sportsballnews.org.conf
+RUN ln -s /etc/nginx/sites-available/sportsballnews.org.conf /etc/nginx/sites-enabled/
+
 # Expose port 80 to the outside world
 EXPOSE 80
 

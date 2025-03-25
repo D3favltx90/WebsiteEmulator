@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.news-section {
+    margin-bottom: 20px;
+}
+
+.news-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.news-item h3 {
+    margin-top: 0;
+}
+
+.news-date {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.read-more {
+    color: blue;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+    position: fixed; /* Or 'static' if you don't want it fixed */
+    bottom: 0;
+    width: 100%;
+}
