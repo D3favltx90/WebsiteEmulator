@@ -42,6 +42,49 @@ jobs:
           fi
 
       # Need to add checks per site checking for expected content
+      - name: Run server_name 'localhost' Health Check
+        run: |
+          # Verify localhost Host Header does not redirect to any site
+          EXIT_CODE=$(curl -s -H 'Host: localhost' http://localhost | egrep -io '<title>.*nginx' 1>/dev/null 2>/dev/null; echo $?)
+          if [[ "$EXIT_CODE" -ne "0" ]]; then
+            echo "'localhost' Health Check Failed! Curl Content: $(curl -s -H 'Host: localhost' http://localhost)"
+            exit 1
+          else
+            echo "'localhost' Health Check Passed! Status Code: $EXIT_CODE"
+          fi
+
+      - name: Run server_name 'dripmart.org' Health Check
+        run: |
+          # Verify localhost Host Header does not redirect to any site
+          EXIT_CODE=$(curl -s -H 'Host: dripmart.org' http://localhost | egrep -io '<title>.*dripmart' 1>/dev/null 2>/dev/null; echo $?)
+          if [[ "$EXIT_CODE" -ne "0" ]]; then
+            echo "'dripmart.org' Health Check Failed! Curl Content: $(curl -s -H 'Host: dripmart.org' http://localhost)"
+            exit 1
+          else
+            echo "'dripmart.org' Health Check Passed! Status Code: $EXIT_CODE"
+          fi
+
+      - name: Run server_name 'echoteck.net' Health Check
+        run: |
+          # Verify localhost Host Header does not redirect to any site
+          EXIT_CODE=$(curl -s -H 'Host: echoteck.net' http://localhost | egrep -io '<title>.*echoteck' 1>/dev/null 2>/dev/null; echo $?)
+          if [[ "$EXIT_CODE" -ne "0" ]]; then
+            echo "'echoteck.net' Health Check Failed! Curl Content: $(curl -s -H 'Host: echoteck.net' http://localhost)"
+            exit 1
+          else
+            echo "'echoteck.net' Health Check Passed! Status Code: $EXIT_CODE"
+          fi
+
+      - name: Run server_name 'vidstreamerz.com' Health Check
+        run: |
+          # Verify localhost Host Header does not redirect to any site
+          EXIT_CODE=$(curl -s -H 'Host: vidstreamerz.com' http://localhost | egrep -io '<title>.*vidstreamerz' 1>/dev/null 2>/dev/null; echo $?)
+          if [[ "$EXIT_CODE" -ne "0" ]]; then
+            echo "'vidstreamerz.com' Health Check Failed! Curl Content: $(curl -s -H 'Host: vidstreamerz.com' http://localhost)"
+            exit 1
+          else
+            echo "'vidstreamerz.com' Health Check Passed! Status Code: $EXIT_CODE"
+          fi
 
       # Need to add checks per site checking for expected 404 page
 
