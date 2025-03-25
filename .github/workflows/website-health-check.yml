@@ -19,7 +19,7 @@ jobs:
       - name: Set up Docker Compose
         run: |
           sudo apt-get update
-          sudo apt-get install docker.io
+          sudo apt-get -y -f install docker.io
 
       - name: Start the Web App with Docker Compose
         run: |
@@ -47,4 +47,4 @@ jobs:
       - name: Stop the Web App with Docker Compose
         if: always() # Ensure this runs even if previous steps failed
         run: |
-          docker stop $(docker ps -a -q)
+          if [[ $(docker ps -a -q | wc -l) > 0 ]]; then docker stop $(docker ps -a -q); fi
