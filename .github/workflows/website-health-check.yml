@@ -86,6 +86,17 @@ jobs:
             echo "'vidstreamerz.com' Health Check Passed! Status Code: $EXIT_CODE"
           fi
 
+      - name: Run server_name 'sportsballnews.org' Health Check
+        run: |
+          # Verify localhost Host Header does not redirect to any site
+          EXIT_CODE=$(curl -s -H 'Host: sportsballnews.org' http://localhost | egrep -io '<title>.*sportsballnews' 1>/dev/null 2>/dev/null; echo $?)
+          if [[ "$EXIT_CODE" -ne "0" ]]; then
+            echo "'sportsballnews.org' Health Check Failed! Curl Content: $(curl -s -H 'Host: sportsballnews.org' http://localhost)"
+            exit 1
+          else
+            echo "'sportsballnews.org' Health Check Passed! Status Code: $EXIT_CODE"
+          fi
+
       # Need to add checks per site checking for expected 404 page
 
       - name: Stop the Web App with Docker Compose
