@@ -3,47 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SportsBallNews</title>
+    <title>SportsBallNews - Your Source for Sports Coverage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1>SportsBallNews</h1>
+        <nav class="main-nav">
+            <div class="logo">
+                <i class="fas fa-futbol"></i>
+                <h1>SportsBallNews</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#all" class="active">All Sports</a></li>
+                <li><a href="#football"><i class="fas fa-football-ball"></i> Football</a></li>
+                <li><a href="#soccer"><i class="fas fa-futbol"></i> Soccer</a></li>
+                <li><a href="#baseball"><i class="fas fa-baseball-ball"></i> Baseball</a></li>
+                <li><a href="#basketball"><i class="fas fa-basketball-ball"></i> Basketball</a></li>
+                <li><a href="#golf"><i class="fas fa-golf-ball"></i> Golf</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <section class="news-section">
-            <h2>Latest News</h2>
+        <section class="featured-news">
+            <div class="featured-article">
+                <img src="https://source.unsplash.com/random/800x400/?sports" alt="Featured Sports News">
+                <div class="featured-content">
+                    <span class="sport-tag">Football</span>
+                    <h2>Super Bowl LVIII: Chiefs vs 49ers - The Ultimate Showdown</h2>
+                    <p class="news-date">Published: March 25, 2024</p>
+                    <p class="news-excerpt">The Kansas City Chiefs and San Francisco 49ers prepare for an epic battle in Las Vegas...</p>
+                    <a href="#" class="read-more">Read Full Story</a>
+                </div>
+            </div>
+        </section>
 
-            <article class="news-item">
-                <h3>Team X Wins Championship!</h3>
-                <p class="news-date">Published: 2023-10-27</p>
-                <p>
-                    [**Important:** Replace this with the actual news content.  Keep it concise for a snippet.]
-                    Team X defeated Team Y in a thrilling final game to secure their championship title.  The game went into overtime, with a last-second shot deciding the victor. 
-                    <span class="read-more">Read more...</span>
-                    <span class="full-article" style="display: none;">[**Important:**  Replace this with the full news article content. Include more details, quotes, and analysis.]  ... more details here ...</span>
-                </p>
-            </article>
+        <section class="news-grid">
+            <div class="news-filters">
+                <button class="filter-btn active" data-filter="all">All News</button>
+                <button class="filter-btn" data-filter="football">Football</button>
+                <button class="filter-btn" data-filter="soccer">Soccer</button>
+                <button class="filter-btn" data-filter="baseball">Baseball</button>
+                <button class="filter-btn" data-filter="basketball">Basketball</button>
+                <button class="filter-btn" data-filter="golf">Golf</button>
+            </div>
 
-            <article class="news-item">
-                <h3>Star Player Suffers Injury</h3>
-                <p class="news-date">Published: 2023-10-26</p>
-                <p>
-                    [**Important:** Replace this with the actual news content.  Keep it concise for a snippet.]
-                    Star player Z sustained an injury during practice and will be sidelined for several weeks.
-                    <span class="read-more">Read more...</span>
-                    <span class="full-article" style="display: none;">[**Important:**  Replace this with the full news article content.] ... more details here ...</span>
-                </p>
-            </article>
+            <div class="news-container">
+                <!-- Football News -->
+                <article class="news-item" data-sport="football">
+                    <div class="news-image">
+                        <img src="https://source.unsplash.com/random/400x300/?football" alt="Football News">
+                        <span class="sport-tag">Football</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>NFL Draft 2024: Top Prospects Revealed</h3>
+                        <p class="news-date">March 25, 2024</p>
+                        <p class="news-excerpt">Scouting reports and analysis of the top prospects in this year's NFL Draft...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
 
-            <!-- Add more news articles here -->
+                <!-- Soccer News -->
+                <article class="news-item" data-sport="soccer">
+                    <div class="news-image">
+                        <img src="https://source.unsplash.com/random/400x300/?soccer" alt="Soccer News">
+                        <span class="sport-tag">Soccer</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>Champions League Quarter-Finals Draw Announced</h3>
+                        <p class="news-date">March 25, 2024</p>
+                        <p class="news-excerpt">The UEFA Champions League quarter-finals draw sets up some exciting matches...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Baseball News -->
+                <article class="news-item" data-sport="baseball">
+                    <div class="news-image">
+                        <img src="https://source.unsplash.com/random/400x300/?baseball" alt="Baseball News">
+                        <span class="sport-tag">Baseball</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>MLB Opening Day: What to Watch For</h3>
+                        <p class="news-date">March 25, 2024</p>
+                        <p class="news-excerpt">A comprehensive guide to the most anticipated matchups of MLB Opening Day...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Basketball News -->
+                <article class="news-item" data-sport="basketball">
+                    <div class="news-image">
+                        <img src="https://source.unsplash.com/random/400x300/?basketball" alt="Basketball News">
+                        <span class="sport-tag">Basketball</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>NBA Playoff Race Heating Up</h3>
+                        <p class="news-date">March 25, 2024</p>
+                        <p class="news-excerpt">Analysis of the tight race for the final playoff spots in both conferences...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Golf News -->
+                <article class="news-item" data-sport="golf">
+                    <div class="news-image">
+                        <img src="https://source.unsplash.com/random/400x300/?golf" alt="Golf News">
+                        <span class="sport-tag">Golf</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>Masters Tournament Preview</h3>
+                        <p class="news-date">March 25, 2024</p>
+                        <p class="news-excerpt">Everything you need to know about the upcoming Masters Tournament at Augusta...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2019 SportsBallNews</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About SportsBallNews</h3>
+                <p>Your trusted source for comprehensive sports coverage across all major leagues and tournaments.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SportsBallNews. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
