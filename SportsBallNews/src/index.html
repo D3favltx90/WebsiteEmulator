@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportsBallNews - Your Source for Sports Coverage</title>
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <i class="fas fa-futbol"></i>
+                <h1>SportsBallNews</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#all" class="active">All Sports</a></li>
+                <li><a href="#football"><i class="fas fa-football-ball"></i> Football</a></li>
+                <li><a href="#soccer"><i class="fas fa-futbol"></i> Soccer</a></li>
+                <li><a href="#baseball"><i class="fas fa-baseball-ball"></i> Baseball</a></li>
+                <li><a href="#basketball"><i class="fas fa-basketball-ball"></i> Basketball</a></li>
+                <li><a href="#golf"><i class="fas fa-golf-ball"></i> Golf</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="featured-news">
+            <div class="featured-article">
+                <img src="./images/sportsballnews.jpeg" alt="Featured Sports News">
+                <div class="featured-content">
+                    <span class="sport-tag">Football</span>
+                    <h2>Uppity Bowl LVIII: Cybernetic Cyclones vs Fighting Narwhals - The Ultimate Showdown</h2>
+                    <p class="news-date">Published: March 25, 2025</p>
+                    <p class="news-excerpt">The Fighting Narwhals, a team invented for tax write-offs and fueled by suspiciously cheap energy drinks...</p>
+                    <a href="#" class="read-more">Read Full Story</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-grid">
+            <div class="news-filters">
+                <button class="filter-btn active" data-filter="all">All News</button>
+                <button class="filter-btn" data-filter="football">Football</button>
+                <button class="filter-btn" data-filter="soccer">Soccer</button>
+                <button class="filter-btn" data-filter="baseball">Baseball</button>
+                <button class="filter-btn" data-filter="basketball">Basketball</button>
+                <button class="filter-btn" data-filter="golf">Golf</button>
+            </div>
+
+            <div class="news-container">
+                <!-- Football News -->
+                <article class="news-item" data-sport="football">
+                    <div class="news-image">
+                        <img src="./images/football.jpeg" alt="Football News">
+                        <span class="sport-tag">Football</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>Football Draft 2025: Top Prospects Revealed</h3>
+                        <p class="news-date">March 25, 2025</p>
+                        <p class="news-excerpt">Scouting reports and analysis of the top prospects in this year's Football Draft...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Soccer News -->
+                <article class="news-item" data-sport="soccer">
+                    <div class="news-image">
+                        <img src="./images/soccer.jpeg" alt="Soccer News">
+                        <span class="sport-tag">Soccer</span>
+                    </div>
+                    <div class="news-content">
+                            <h3>Trans-Oceanic Soccer Association (TOSA) Quarter-Finals Draw Announced</h3>
+                        <p class="news-date">March 25, 2025</p>
+                        <p class="news-excerpt">The TOSA Champions League quarter-finals draw sets up some exciting matches...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Baseball News -->
+                <article class="news-item" data-sport="baseball">
+                    <div class="news-image">
+                        <img src="./images/baseball.jpeg" alt="Baseball News">
+                        <span class="sport-tag">Baseball</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>Baseball Draft 2025: Top Prospects Revealed</h3>
+                        <p class="news-date">March 25, 2025</p>
+                        <p class="news-excerpt">A comprehensive guide to the most anticipated matchups of Baseball Draft...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Basketball News -->
+                <article class="news-item" data-sport="basketball">
+                    <div class="news-image">
+                        <img src="./images/basketball.jpeg" alt="Basketball News">
+                        <span class="sport-tag">Basketball</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>Basketball Playoff Race Heating Up</h3>
+                        <p class="news-date">March 25, 2025</p>
+                        <p class="news-excerpt">Analysis of the tight race for the final playoff spots in both conferences...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Golf News -->
+                <article class="news-item" data-sport="golf">
+                    <div class="news-image">
+                        <img src="./images/golf.jpeg" alt="Golf News">
+                        <span class="sport-tag">Golf</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>The Evergreen Open Tournament Preview</h3>
+                        <p class="news-date">March 25, 2025</p>
+                        <p class="news-excerpt">Everything you need to know about the upcoming Evergreen Open Tournament at Evergreen...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About SportsBallNews</h3>
+                <p>Your trusted source for comprehensive sports coverage across all major leagues and tournaments.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SportsBallNews. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
